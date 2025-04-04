@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "cdv-intelliprovewebview": "file:../plugin",
+    "cordova-android": "^14.0.0",
+    "cordova-ios": "^7.1.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cdv-intelliprovewebview": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}
