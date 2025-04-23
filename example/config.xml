@@ -5,4 +5,37 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+    <!-- Android Platform (Kotlin) -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <!-- Enforce Build Configurations -->
+            <preference name="android-minSdkVersion" value="24" />
+            <preference name="android-targetSdkVersion" value="34" />
+            <preference name="android-compileSdkVersion" value="34" />
+            <preference name="android-buildToolsVersion" value="34.0.0" />
+            <preference name="android-minBuildToolsVersion" value="34.0.0" />
+            <preference name="GradlePluginKotlinEnabled" value="true" />
+            <preference name="GradlePluginKotlinVersion" value="1.8.0" />
+        </config-file>
+    </platform>
+
+    <!-- iOS Platform -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVIntelliProveWebView">
+                <param name="ios-package" value="CDVIntelliProveWebView"/>
+            </feature>
+
+            <preference name="deployment-target" value="15.0" />
+            <preference name="UseSwiftLanguageVersion" value="5.0" />
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>We need camera permission for performing the measurement.</string>
+        </config-file>
+
+        <source-file src="src/ios/CDVIntelliProveWebView.swift" />
+        <framework src="src/ios/Frameworks/IntelliProveSDK.xcframework" custom="true" embed="true"/>
+    </platform>
 </widget>

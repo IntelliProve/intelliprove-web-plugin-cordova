@@ -2,4 +2,69 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cdv-intelliprovewebview" version="1.0.0">
     <name>IntelliProve WebView</name>
 
+    <!-- JavaScript Interface -->
+    <js-module name="IntelliProve WebView" src="www/CDVIntelliProveWebView.js">
+        <clobbers target="cordova.plugins.CDVIntelliProveWebView" />
+    </js-module>
+
+    <!-- Android Platform (Kotlin) -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CDVIntelliProveWebView">
+                <param name="android-package" value="com.intelliprove.cdvwebview.CDVIntelliProveWebView"/>
+            </feature>
+            
+            <!-- Enforce Build Configurations -->
+            <preference name="android-minSdkVersion" value="24" />
+            <preference name="android-targetSdkVersion" value="34" />
+            <preference name="android-compileSdkVersion" value="34" />
+            <preference name="android-buildToolsVersion" value="34.0.0" />
+            <preference name="android-minBuildToolsVersion" value="34.0.0" />
+            <preference name="GradlePluginKotlinEnabled" value="true" />
+            <preference name="GradlePluginKotlinVersion" value="1.8.0" />
+        </config-file>
+
+        <!-- Required Permissions -->
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.CAMERA" />
+        </config-file>
+
+        <!-- Camera Feature (Not Required) -->
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-feature android:name="android.hardware.camera" android:required="false" />
+        </config-file>
+
+        <!-- IntelliWebViewActivity -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.intelliprove.webview.IntelliWebViewActivity"
+                      android:exported="true"
+                      android:theme="@style/Theme.AppCompat.NoActionBar" />
+        </config-file>
+
+        <source-file src="src/android/CDVIntelliProveWebView.kt" target-dir="java/com/intelliprove/cdvwebview" />
+        <lib-file src="src/android/libs/IntelliProveWebView.aar" />
+        <framework src="src/android/CDVIntelliProveWebView.gradle" custom="true" type="gradleReference"/>
+    </platform>
+
+    <!-- iOS Platform -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVIntelliProveWebView">
+                <param name="ios-package" value="CDVIntelliProveWebView"/>
+            </feature>
+
+            <preference name="deployment-target" value="15.0" />
+            <preference name="UseSwiftLanguageVersion" value="5" />
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>We need camera permission for performing the measurement.</string>
+        </config-file>
+
+        <source-file src="src/ios/CDVIntelliProveWebView.swift" />
+        <framework src="src/ios/Frameworks/IntelliProveSDK.xcframework" custom="true" embed="true"/>
+
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+    </platform>
 </plugin>

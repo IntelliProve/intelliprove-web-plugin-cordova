@@ -1,0 +1,10 @@
+repositories {
+  flatDir {
+    dirs 'libs'
+  }
+}
+
+dependencies {
+  implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+  implementation files('libs/IntelliProveWebView.aar')
+}
