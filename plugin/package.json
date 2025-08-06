@@ -1,7 +1,7 @@
 {
   "name": "cdv-intelliprovewebview",
   "displayName": "IntelliProve WebView",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IntelliProve WebView for Cordova",
   "keywords": [
     "ecosystem:cordova"

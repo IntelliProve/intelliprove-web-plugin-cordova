@@ -29,7 +29,7 @@ function onDeviceReady() {
 
     // Add Callback to IntelliProve Native Module for presenting the IntelliWebView
     document.getElementById('openWebViewButton').addEventListener('click', function () {
-        const url = "https://plugin.intelliprove.com/?action_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiIiwiY3VzdG9tZXIiOiJ0ZXN0aW5nLWFwaS1rZXkiLCJncm91cCI6ImFkbWluIiwibWF4X21lYXN1cmVtZW50X2NvdW50IjotMSwidXNlcl9pZCI6bnVsbCwiYXV0aDBfdXNlcl9pZCI6bnVsbH0sIm1ldGEiOnt9LCJleHAiOjE3NjcyMjU2MDB9.3aW8GlcctgPzryNmnuSRxzf4QyD6RXC_W9ng8tHFyyE&patient=Dries&performer=Dries";
+        const url = "https://plugin-rc.intelliprove.com/?action_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiIiwiY3VzdG9tZXIiOiJ0ZXN0aW5nLWFwaS1rZXkiLCJncm91cCI6ImFkbWluIiwibWF4X21lYXN1cmVtZW50X2NvdW50IjotMSwidXNlcl9pZCI6bnVsbCwiYXV0aDBfdXNlcl9pZCI6bnVsbH0sIm1ldGEiOnt9LCJleHAiOjE3NjcyMjU2MDB9.3aW8GlcctgPzryNmnuSRxzf4QyD6RXC_W9ng8tHFyyE&patient=Dries&performer=Dries";
 
         if (cordova.plugins && cordova.plugins.CDVIntelliProveWebView && cordova.plugins.CDVIntelliProveWebView.presentWebView) {
             cordova.plugins.CDVIntelliProveWebView.presentWebView(url,
