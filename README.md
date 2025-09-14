@@ -2,9 +2,23 @@
 
 IntelliProve WebView for Cordova
 
+## System
+Install Cordova:
+https://cordova.apache.org/docs/en/10.x/guide/cli/#installing-the-cordova-cli
+
+Check Cordova requirements:
+`cordova requirements`
+
+## Package Cordova plugin
+- Go to ./plugin folder
+- Update version number in package.json
+- `npm pack`
+
+## Example Adding IntelliWebViewWSDK
+
 ### Installing the Cordova Plugin in your Cordova App project
 
-* Download the `cdv-intelliprovewebview-0.1.0.tgz` tarball and unpack it.
+* Download the `cdv-intelliprovewebview-x.x.x.tgz` tarball and unpack it into a folder.
 * In your Cordova App root directory, execute `cordova plugin add /path/to/unpacked/tarball`.
 
 ### Using the IntelliProveWebView in your application
@@ -66,8 +80,12 @@ function onDeviceReady() {
 
 ### Running your application
 
-Depending on how you build the application, you would run a different command. For this example, let's assume cordova is installed as a ruby gem:
+Depending on how you build the application, you would run a different command.
+For this example, let's assume cordova is installed as a ruby gem:
 
-`bundle exec cordova clean android` or `bundle exec cordova clean ios`
-`bundle exec cordova build android` or `bundle exec cordova build ios`
-`bundle exec cordova run android` or `bundle exec cordova run ios`
+`cordova platforms add android` or `cordova platforms add ios`
+
+`cordova clean android` or `cordova clean ios`
+`cordova build android` or `cordova build ios`
+`cordova run android` or `cordova run ios`
+

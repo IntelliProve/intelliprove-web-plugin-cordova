@@ -13,13 +13,13 @@
             <feature name="CDVIntelliProveWebView">
                 <param name="android-package" value="com.intelliprove.cdvwebview.CDVIntelliProveWebView"/>
             </feature>
-            
+
             <!-- Enforce Build Configurations -->
             <preference name="android-minSdkVersion" value="24" />
-            <preference name="android-targetSdkVersion" value="34" />
-            <preference name="android-compileSdkVersion" value="34" />
-            <preference name="android-buildToolsVersion" value="34.0.0" />
-            <preference name="android-minBuildToolsVersion" value="34.0.0" />
+            <preference name="android-targetSdkVersion" value="35" />
+            <preference name="android-compileSdkVersion" value="35" />
+            <preference name="android-buildToolsVersion" value="35.0.0" />
+            <preference name="android-minBuildToolsVersion" value="35.0.0" />
             <preference name="GradlePluginKotlinEnabled" value="true" />
             <preference name="GradlePluginKotlinVersion" value="1.8.0" />
         </config-file>
@@ -37,9 +37,9 @@
 
         <!-- IntelliWebViewActivity -->
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="com.intelliprove.webview.IntelliWebViewActivity"
-                      android:exported="true"
-                      android:theme="@style/Theme.AppCompat.NoActionBar" />
+            <activity
+                android:name="com.intelliprove.webview.IntelliWebViewActivity"
+                android:theme="@style/Theme.AppCompat.NoActionBar"/>
         </config-file>
 
         <source-file src="src/android/CDVIntelliProveWebView.kt" target-dir="java/com/intelliprove/cdvwebview" />
