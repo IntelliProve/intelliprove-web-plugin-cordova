@@ -5,21 +5,36 @@ IntelliProve WebView for Cordova
 ## System
 Install Cordova:
 https://cordova.apache.org/docs/en/10.x/guide/cli/#installing-the-cordova-cli
+`sudo npm install -g cordova`
 
 Check Cordova requirements:
 `cordova requirements`
+
+## Update IntelliProve SDK files
+### iOS
+- Get the XCFramework tarball
+- Unzip the folder under _plugin/src/ios/Frameworks_
+
+### Android
+- Get the Android .aar file
+- Copy the file to _plugin/src/android/libs_
 
 ## Package Cordova plugin
 - Go to ./plugin folder
 - Update version number in package.json
 - `npm pack`
 
+This generates a new _.tgz_ file, ready for distribution.
+
 ## Example Adding IntelliWebViewWSDK
 
 ### Installing the Cordova Plugin in your Cordova App project
 
-* Download the `cdv-intelliprovewebview-x.x.x.tgz` tarball and unpack it into a folder.
-* In your Cordova App root directory, execute `cordova plugin add /path/to/unpacked/tarball`.
+* Download the `cdv-intelliprovewebview-x.x.x.tgz` tarball
+* Go _./example_ folder
+* Optionally remove the previous version using `cordova plugin remove cdv-intelliprovewebview`
+* Unpack the tarball (this gives a "package" folder)
+* In your Cordova App root directory, execute `cordova plugin add /path/to/package_folder`.
 
 ### Using the IntelliProveWebView in your application
 
