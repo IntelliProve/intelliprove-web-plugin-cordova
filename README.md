@@ -17,6 +17,7 @@ Check Cordova requirements:
 
 ### Android
 - Get the Android .aar file
+- Rename to "IntelliProveWebView.aar"
 - Copy the file to _plugin/src/android/libs_
 
 ## Package Cordova plugin
