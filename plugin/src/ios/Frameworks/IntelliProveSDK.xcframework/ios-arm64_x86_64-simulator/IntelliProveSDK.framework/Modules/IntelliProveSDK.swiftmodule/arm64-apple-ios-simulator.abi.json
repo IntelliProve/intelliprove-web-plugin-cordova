@@ -463,7 +463,7 @@
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebView.swift",
       "kind": "StringLiteral",
-      "offset": 2540,
+      "offset": 2571,
       "length": 342,
       "value": "\"https:\/\/plugin-rc.intelliprove.com\/?action_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiIiwiY3VzdG9tZXIiOiJ0ZXN0aW5nLWFwaS1rZXkiLCJncm91cCI6ImFkbWluIiwibWF4X21lYXN1cmVtZW50X2NvdW50IjotMSwiYXV0aDBfdXNlcl9pZCI6bnVsbH0sIm1ldGEiOnt9LCJleHAiOjE3MzU2ODk2MDB9.zKWdq4lE6SXOnhvSgHCVvPKTsiwH66likFDNPIe4ozk&patient=DriesVanmeert\""
     },
@@ -492,69 +492,69 @@
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
       "offset": 1982,
-      "length": 244,
-      "value": "\"var meta = document.createElement('meta');\nmeta.name = 'viewport';\nmeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';\nvar head = document.getElementsByTagName('head')[0];\nhead.appendChild(meta);\""
+      "length": 264,
+      "value": "\"var meta = document.createElement('meta');\nmeta.name = 'viewport';\nmeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover';\nvar head = document.getElementsByTagName('head')[0];\nhead.appendChild(meta);\""
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2381,
+      "offset": 2401,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2644,
+      "offset": 2664,
       "length": 185,
       "value": "\"window.postMessage = function(data) {\n    var jsonString = JSON.stringify(data)\n    window.webkit.messageHandlers.\""
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2797,
+      "offset": 2817,
       "length": 1,
       "value": "\".postMessage(jsonString);\n};\""
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2984,
+      "offset": 3004,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3322,
+      "offset": 3342,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3530,
+      "offset": 3550,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3594,
+      "offset": 3614,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3660,
+      "offset": 3680,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tanguy\/Development\/intelliprove-web-plugin-ios\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3814,
+      "offset": 3834,
       "length": 4,
       "value": "true"
     }
