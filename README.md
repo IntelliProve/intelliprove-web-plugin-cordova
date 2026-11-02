@@ -27,6 +27,9 @@ Check Cordova requirements:
 
 This generates a new _.tgz_ file, ready for distribution.
 
+## Testing
+See [Testing on an emulator](docs/emulator-testing.md) to check, without a phone, that a host app survives Android killing the scan's WebView.
+
 ## Example Adding IntelliWebViewWSDK
 
 ### Installing the Cordova Plugin in your Cordova App project
