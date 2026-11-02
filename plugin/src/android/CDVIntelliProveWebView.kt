@@ -4,6 +4,7 @@ import android.os.Build
 import android.webkit.RenderProcessGoneDetail
 import android.webkit.WebView
 import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat
 import org.apache.cordova.CallbackContext
 import org.apache.cordova.CordovaPlugin
 import org.apache.cordova.PluginResult
@@ -59,7 +60,8 @@ class CDVIntelliProveWebView : CordovaPlugin(), IntelliWebViewDelegate {
             hostWebViewGone = false
             // The callback belongs to the dead page; the rebuilt screen loads the host's start page afresh
             webViewCallbackContext = null
-            cordova.activity.recreate()
+            // ActivityCompat works around the relaunch bugs Activity.recreate() has on Android 8.0/8.1
+            ActivityCompat.recreate(cordova.activity)
         }
     }
 
