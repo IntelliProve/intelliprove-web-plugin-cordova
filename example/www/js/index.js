@@ -29,7 +29,8 @@ function onDeviceReady() {
 
     // Add Callback to IntelliProve Native Module for presenting the IntelliWebView
     document.getElementById('openWebViewButton').addEventListener('click', function () {
-        const url = "https://wippy.intelliprove.com/?action_token=...";
+        // A URL typed into the field wins; see docs/emulator-testing.md for test URLs
+        const url = document.getElementById('testUrl').value.trim() || "https://wippy.intelliprove.com/?action_token=...";
 
         if (cordova.plugins && cordova.plugins.CDVIntelliProveWebView && cordova.plugins.CDVIntelliProveWebView.presentWebView) {
             cordova.plugins.CDVIntelliProveWebView.presentWebView(url,
